@@ -432,3 +432,23 @@ ul {
         background: none !important;              /* Enlève tout dégradé éventuel */
     }
 }
+
+/* Aligne le logo et le menu sur la même ligne horizontale sur téléphone */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: row !important;         /* Force l'alignement sur une seule ligne */
+        justify-content: space-between !important; /* Place le logo à gauche et le menu à droite */
+        align-items: center !important;
+        padding: 1rem 1.5rem !important;        /* Réduit l'espace intérieur en hauteur */
+    }
+
+    .nav-list,
+    .nav-menu ul {
+        gap: 1rem !important;                   /* Réduit l'espace entre Accueil, Portfolio et Contact */
+    }
+
+    .nav-item,
+    .nav-link {
+        font-size: 0.72rem !important;          /* Rend l'écriture légèrement plus compacte pour tenir sur une ligne */
+    }
+}
