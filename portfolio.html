@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | AKM Capture </title>
+    
+    <!-- Intégration des polices : Playfair Display & Inter (cohérence accueil) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="image/logos/logoblancSF.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lien vers la feuille de style spécifique du portfolio -->
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <!-- En-tête (Header identique à l'accueil) -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo gauche -->
+            <div class="header-logo">
+    <a href="index.html" class="logo-link">
+        <img src="image/logos/logoblancSF.png" alt="Logo AKM" class="logo-img">
+    </a>
+</div>
+
+            <!-- Menu de navigation milieu -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-item">Accueil</a></li>
+                    <li><a href="portfolio.html" class="nav-item active">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1 : Le Carousel (Bannière interactive pleine largeur) -->
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <img src="image/galerie portfolio/19galerieakmc.jpg" alt="Portrait artistique">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag"></span>
+                            <h2 class="slide-title"></h2>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <img src="image/galerie portfolio/20galerieakmc.jpg" alt="Paysage brumeux">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag"></span>
+                            <h2 class="slide-title"></h2>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <img src="image/galerie portfolio/8galerieakmc.jpg" alt="Photo de mariage intime">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag"></span>
+                            <h2 class="slide-title"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-logo-overlay">
+                    <img src="image/logos/akmprésente.png" alt="Logo Central" class="carousel-logo">
+                </div>
+
+                <!-- Boutons de contrôle du carrousel -->
+                <button class="carousel-btn prev" id="prevBtn" aria-label="Image précédente">&#10229;</button>
+                <button class="carousel-btn next" id="nextBtn" aria-label="Image suivante">&#10230;</button>
+            </div>
+        </section>
+
+        <!-- Section 2 : Galerie par Projets (Style Pinterest) -->
+        <section class="gallery-section" >
+            <div class="gallery-header" id="gallery-start">
+                 <a href="#gallery-start" class="hero-scroll-link" aria-label="Défiler vers la galerie">
+                    <span class="scroll-arrow"></span>
+                </a>
+                <span class="gallery-tag">Galerie</span>
+
+                
+                <!-- Système de filtrage -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="portrait">Portrait</button>
+                    <button class="filter-btn" data-filter="mariage">Mariage</button>
+                </div>
+            </div>
+
+            <!-- Grille Masonry -->
+            <div class="gallery-masonry" id="galleryGrid">
+                <!-- Portrait 1 (Vertical) -->
+                <div class="gallery-item" data-category="portrait">
+                    <img src="image/galerie portfolio/9galerieakmc.jpg" alt="Portrait femme tons chauds" class="gallery-img">
+                </div>
+
+
+                <!-- Mariage 1 (Carré ou vertical moyen) -->
+                <div class="gallery-item" data-category="mariage">
+                    <img src="image/galerie portfolio/27galerieakmc.jpg" alt="Réception mariage extérieure" class="gallery-img">
+                </div>
+
+                <!-- Portrait 2 (Très long) -->
+                <div class="gallery-item" data-category="portrait">
+                    <img src="image/galerie portfolio/26galerieakmc.jpg" alt="Portrait homme classique" class="gallery-img">
+                </div>
+
+
+                <!-- Mariage 2 (Vertical long) -->
+                
+
+                <!-- Exemple de nouvelle photo -->
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/23galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+                <div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/19galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/20galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="mariage">
+                    <img src="image/galerie portfolio/3galerieakmc.jpg" alt="Couple de mariés" class="gallery-img">
+                    <div class="item-overlay"></div>
+                </div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/5galerieakmcR.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/14galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/13galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+
+
+
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/25galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/15galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/1galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/21galerieakmcR.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/10galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/22galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/18galerieakmcR.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/8galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/24galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+<div class="gallery-item" data-category="portrait">
+    <img src="image/galerie portfolio/2galerieakmc.jpg" alt="Regards" class="gallery-img">
+</div>
+
+        </section>
+    </main>
+
+    <!-- Système Lightbox (Vue agrandie masquée par défaut) -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Image agrandie">
+    </div>
+
+    <!-- Script JavaScript interactif -->
+    <script>
+        // 1. Logique du Carrousel
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+        // Défilement automatique doux toutes les 6 secondes
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 6000);
+
+        // 2. Logique de Filtrage de la Galerie
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Gestion de la classe active sur les boutons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filterValue === 'all' || category === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 3. Logique de la Lightbox (Agrandissement)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('.gallery-img');
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('active');
+                }
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Fermer la lightbox au clic en dehors de l'image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Bas de page (Footer) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Crédit à gauche -->
+            <p class="footer-credits">© 2026 AKM Capture. Tous droits réservés.</p>
+            
+            <!-- Raccourcis réseaux à droite -->
+            <div class="footer-socials">
+                <!-- E-mail -->
+                <a href="mailto:azhrhn@outlook.com.com" class="footer-icon-link" aria-label="E-mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://instagram.com/akm.capture" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                
+                <!-- Pinterest -->
+                <a href="https://pinterest.com/azhrhn" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="Pinterest">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.27 2.68 7.91 6.46 9.38-.09-.8-.17-2.02.04-2.89.18-.78 1.16-5.02 1.16-5.02s-.3-.59-.3-1.47c0-1.38.8-2.41 1.8-2.41.85 0 1.26.64 1.26 1.4 0 .85-.54 2.13-.82 3.31-.23.99.49 1.8 1.47 1.8 1.77 0 3.13-1.86 3.13-4.55 0-2.38-1.71-4.04-4.14-4.04-2.82 0-4.48 2.12-4.48 4.31 0 .85.33 1.77.74 2.27.08.1.09.18.06.28l-.27 1.12c-.04.18-.15.22-.34.13-1.25-.58-2.03-2.4-2.03-3.86 0-3.14 2.28-6.02 6.58-6.02 3.45 0 6.13 2.46 6.13 5.74 0 3.43-2.16 6.19-5.16 6.19-1.01 0-1.95-.52-2.27-1.14l-.62 2.36c-.22.86-.83 1.94-1.24 2.6 1.05.3 2.16.48 3.31.48 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,416 @@
+/* ==========================================================================
+   1. VARIABLES & RESET (Identique à l'accueil et portfolio)
+   ========================================================================== */
+:root {
+    --color-bg-light: #FDFBF7;       
+    --color-text-dark: #ffffff;      
+    --color-accent: #000000;         
+    --color-accent-hover: #ffffff;
+    --color-white: #FFFFFF;
+    
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    --transition-standard: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-standard);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   2. EN-TÊTE (HEADER - Cohérence visuelle)
+   ========================================================================== */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
+}
+
+.nav-list {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-item {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-white);
+    opacity: 0.8;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    opacity: 1;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--color-white);
+    transition: var(--transition-standard);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+}
+
+.social-link {
+    color: var(--color-white);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+}
+
+.social-link:hover {
+    color: var(--color-accent);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.svg-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================================
+   3. STRUCTURE DE FOND
+   ========================================================================== */
+.contact-main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('image/logos/ban3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 1.5rem;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(47, 34, 27, 0.45) 0%, rgba(20, 14, 11, 0.6) 100%);
+    z-index: 1;
+}
+
+/* ==========================================================================
+   4. CARTE DE CONTACT
+   ========================================================================== */
+.contact-card {
+    position: relative;
+    z-index: 2;
+    /* Effet Liquid Glass (verre translucide très léger) */
+    background: rgba(255, 255, 255, 0.06); 
+    backdrop-filter: blur(25px);            /* Floutage renforcé pour l'effet liquide/verre */
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Reflet brillant sur la bordure */
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.25); /* Ombre douce pour décoller la carte du fond */
+    
+    padding: 4rem 3.5rem;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contact-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.contact-lead {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    opacity: 0.85;
+}
+
+/* ==========================================================================
+   5. NOUVEAUX STYLES DES BOUTONS
+   ========================================================================== */
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Bouton principal (E-mail) */
+.btn-contact-primary {
+    display: block;
+    background-color: var(--color-white);
+    color: var(--color-accent);
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: 1px solid var(--color-accent);
+    transition: var(--transition-standard);
+}
+
+.btn-contact-primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Bouton secondaire (Instagram) */
+.btn-contact-secondary {
+    display: block;
+    background-color: transparent;
+    color: var(--color-white);
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: var(--transition-standard);
+}
+
+.btn-contact-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1.5rem;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+    }
+
+    .contact-card {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .main-header {
+        background-color: rgba(47, 34, 27, 0.15);
+        padding-bottom: 0.5rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem 1.5rem;
+        margin-top: 4rem; 
+    }
+
+    .contact-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================================================
+   7. STYLE DU BAS DE PAGE (FOOTER)
+   ========================================================================== */
+.site-footer {
+    background-color: var(--color-bg-light);
+    border-top: 1px solid rgba(47, 34, 27, 0.08);
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+.site-footer .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-credits {
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-icon-link {
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-standard);
+}
+
+.footer-icon-link:hover {
+    color: var(--color-accent);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Cas spécifique : Page de Contact (Superposition transparente absolue)
+   -------------------------------------------------------------------------- */
+.contact-body .site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border-top: none;
+    z-index: 10;
+}
+
+.contact-body .footer-credits {
+    color: var(--color-white);
+    opacity: 0.6;
+}
+
+.contact-body .footer-icon-link {
+    color: var(--color-white);
+    opacity: 0.6;
+}
+
+.contact-body .footer-icon-link:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Version Responsive du Footer
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .site-footer .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    /* Pour la page contact sur mobile, on laisse respirer l'espace */
+    .contact-body .site-footer {
+        position: absolute;
+        bottom: 1rem;
+    }
+}
+
+/* Style du lien du logo */
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Ajustement de l'image du logo */
+.logo-img {
+    height: 35px;      /* Modifiez cette hauteur (ex: 35px, 40px, 50px) pour l'ajuster à votre logo */
+    width: auto;       /* Conserve les proportions d'origine de l'image */
+    display: block;
+    transition: var(--transition-standard);
+}
+
+/* Effet discret au survol du logo (bouton cliquable) */
+.logo-link:hover .logo-img {
+    opacity: 0.8;      /* Légère transparence */
+    transform: scale(1.03); /* Très léger agrandissement */
+}
