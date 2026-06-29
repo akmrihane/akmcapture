@@ -452,3 +452,19 @@ ul {
         font-size: 0.72rem !important;          /* Rend l'écriture légèrement plus compacte pour tenir sur une ligne */
     }
 }
+
+/* ==========================================================================
+   LOGO À L'INTÉRIEUR DE LA CARTE DE CONTACT
+   ========================================================================== */
+.contact-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;         /* Crée un espace aéré sous le logo */
+}
+
+.contact-card-logo {
+    width: 170px;                   /* Ajustez cette largeur pour agrandir ou rétrécir le logo dans la carte */
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1); /* Force le logo en blanc pour ressortir sur la carte */
+}
