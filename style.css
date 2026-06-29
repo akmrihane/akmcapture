@@ -531,3 +531,12 @@ img {
     opacity: 0.8;      /* Légère transparence */
     transform: scale(1.03); /* Très léger agrandissement */
 }
+
+/* Rend la bande du menu (Header) 100% transparente sans démarcation sur téléphone */
+@media (max-width: 480px) {
+    .main-header,
+    .site-header {
+        background-color: transparent !important; /* Enlève la couleur de fond */
+        background: none !important;              /* Enlève tout dégradé éventuel */
+    }
+}

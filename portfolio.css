@@ -647,3 +647,12 @@ body {
 .filter-controls {
     display: none !important;
 }
+
+/* Rend la bande du menu (Header) 100% transparente sans démarcation sur téléphone */
+@media (max-width: 480px) {
+    .main-header,
+    .site-header {
+        background-color: transparent !important; /* Enlève la couleur de fond */
+        background: none !important;              /* Enlève tout dégradé éventuel */
+    }
+}
